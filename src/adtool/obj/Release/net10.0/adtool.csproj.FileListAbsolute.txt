@@ -1,0 +1,15 @@
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\bin\Release\net10.0\adtool.exe
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\bin\Release\net10.0\adtool.deps.json
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\bin\Release\net10.0\adtool.runtimeconfig.json
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\bin\Release\net10.0\adtool.dll
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\bin\Release\net10.0\adtool.pdb
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\adtool.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\adtool.AssemblyInfoInputs.cache
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\adtool.AssemblyInfo.cs
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\adtool.csproj.CoreCompileInputs.cache
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\adtool.sourcelink.json
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\adtool.dll
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\refint\adtool.dll
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\adtool.pdb
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\adtool.genruntimeconfig.cache
+c:\Users\Shengwei\Documents\active-directory-ai\active-directory-ai-auto\src\adtool\obj\Release\net10.0\ref\adtool.dll
