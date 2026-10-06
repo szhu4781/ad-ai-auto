@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("adtool.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b994e374a463f9e4257036f2bcc7908cd63039a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fec3acd632c03ea21dcde39fbe4e7d34bf1727c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("adtool.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("adtool.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

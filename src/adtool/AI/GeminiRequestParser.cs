@@ -8,7 +8,7 @@ namespace adtool.AI
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
-        private const string Model = "gemini-2.5-flash";
+        private const string Model = "gemini-3.1-flash-lite";
 
         public GeminiRequestParser(HttpClient httpClient, string apiKey)
         {
@@ -31,7 +31,7 @@ namespace adtool.AI
                 {
                     new { parts = new[] { new { text = prompt } } }
                 },
-                generateConfig = new { responseMimeType = "application/json" }
+                generationConfig = new { responseMimeType = "application/json" }
             };
 
             var response = await _httpClient.PostAsJsonAsync(url, payload);
@@ -44,7 +44,7 @@ namespace adtool.AI
 
             var result = await response.Content.ReadFromJsonAsync<JsonElement>();
 
-            string json = result.GetProperty("candidates")[0].GetProperty("contents").GetProperty("parts")[0].GetProperty("text").GetString();
+            string json = result.GetProperty("candidates")[0].GetProperty("content").GetProperty("parts")[0].GetProperty("text").GetString();
 
             var parsed = JsonSerializer.Deserialize<OnboardingRequest>(json, new JsonSerializerOptions
             {

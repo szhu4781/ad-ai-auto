@@ -8,10 +8,10 @@ namespace adtool
     public class Program{
         public static async Task Main(string[] args)
         {
-            var apiKey = Environment.GetEnvironmentVariable("API_KEY");
+            var apiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY");
             if (string.IsNullOrWhiteSpace(apiKey))
             {
-                Console.WriteLine("Error: Gemini API Key environment variable not set.");
+                Console.WriteLine("Error: GEMINI_API_KEY environment variable not set.");
                 return;
             }
 
