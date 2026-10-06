@@ -2,10 +2,6 @@ using adtool.AD;
 using adtool.AI;
 using adtool.Models;
 using adtool.JSONCheck;
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
 namespace adtool
 {

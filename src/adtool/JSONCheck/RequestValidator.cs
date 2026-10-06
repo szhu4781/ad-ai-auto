@@ -1,5 +1,4 @@
 using adtool.Models;
-using System.Collections.Generic;
 
 namespace adtool.JSONCheck
 {
