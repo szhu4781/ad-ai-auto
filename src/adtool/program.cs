@@ -15,20 +15,31 @@ namespace adtool
                 return;
             }
 
+            var adDomain = "szhu.lab";
+            var adServiceUser = Environment.GetEnvironmentVariable("AD_SERVICE_USER");
+            var adServicePassword = Environment.GetEnvironmentVariable("AD_SERVICE_PASSWORD");
+
+            if (string.IsNullOrWhiteSpace(adServiceUser))
+            {
+                Console.WriteLine("Error: AD_SERVICE_USER environment variable not set");
+                return;
+            }
+
             var httpClient = new HttpClient();
             IRequestParser parser = new GeminiRequestParser(httpClient, apiKey);
 
             var validOUs = new HashSet<string>
             {
-                "OU=Sales,DC=lab,DC=local",
-                "OU=Engineering,DC=lab,DC=local",
-                "OU=Marketing,DC=lab,DC=local"
+                "OU=Test,DC=szhu,DC=lab",
             };
             
             var validator = new RequestValidator(validOUs);
 
             var passwordGen = new PasswordGenerator();
             var existingUsers = new HashSet<string> {"jsmith"};
+
+            var provisioner = new ADUserProvisioner(adDomain, adServiceUser, adServicePassword);
+
             var usernameGen = new UsernameGenerator(u => existingUsers.Contains(u));
 
             Console.WriteLine("Enter an onboarding request (e.g. \"Onboard Jane Doe, Marketing, OU=Marketing,DC=lab,DC=local\"):");
@@ -67,6 +78,23 @@ namespace adtool
             Console.WriteLine($"  Username:   {username}");
             Console.WriteLine($"  Password:   {password}");
             Console.WriteLine();
+            Console.Write("Proceed with AD write (y/n)\n");
+
+            if(Console.ReadLine()?.Trim().ToLower() != "y")
+            {
+                Console.WriteLine("Operation could not be performed. Try again.");
+                return;
+            }
+
+            var result = provisioner.CreateUser(request, username, password);
+
+            if (result.Success)
+            {
+                Console.WriteLine($"Success - created {result.Username} at {result.DistinguishedName}");
+            } else
+            {
+                Console.WriteLine($"Failed: {result.ErrorMessage}");
+            }
         }
     }
     
